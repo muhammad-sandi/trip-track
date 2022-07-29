@@ -15,7 +15,7 @@ use App\Http\Controllers\CatatanController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login.login');
 });
 
 
