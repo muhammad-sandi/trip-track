@@ -1,4 +1,5 @@
 @extends('layout.main')
+@section('wtitle', 'Dashboard')
 
 @section('content')
 <!-- Content Row -->
@@ -18,7 +19,7 @@
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary float-right mt-3"> Lihat Data</a>
+                <a href="/catatan" class="btn btn-primary float-right mt-3"> Lihat Data</a>
             </div>
         </div>
     </div>

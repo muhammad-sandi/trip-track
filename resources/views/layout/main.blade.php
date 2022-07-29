@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Trip Track</title>
+    <title>Trip Track | @yield('wtitle')</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -89,8 +89,8 @@
 
                     <!-- topbar link -->
                     <div class="d-flex justify-content-evenly w-100">
-                        <h3><a href="" class="text-decoration-none link-secondary">Dashboard</a></h3>
-                        <h3><a href="" class="text-decoration-none link-secondary">Catatan Perjalanan</a></h3>
+                        <h3><a href="/" class="text-decoration-none link-secondary">Dashboard</a></h3>
+                        <h3><a href="/catatan" class="text-decoration-none link-secondary">Catatan Perjalanan</a></h3>
                         <h3><a href="" class="text-decoration-none link-secondary">Isi Data Perjalanan</a></h3>
                     </div>
 
@@ -295,7 +295,7 @@
 
                     <!-- Page Heading -->
                     <div class="mb-4">
-                        <h1 class="h4 mb-0 text-gray-800 fw-bold">Dashboard</h1>
+                        <h1 class="h4 mb-0 text-gray-800 fw-bold">@yield('wtitle')</h1>
                     </div>
 
                 @yield('content')
