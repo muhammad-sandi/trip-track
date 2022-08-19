@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class catatan extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id_user',
+        'tanggal',
+        'jam',
+        'lokasi',
+        'suhu'
+    ];
 }
