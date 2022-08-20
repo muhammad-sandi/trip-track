@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\CatatanResource;
 use Illuminate\Support\Facades\Validator;
 
+
 class CatatanApiController extends Controller
 {
     public function index()
@@ -56,5 +57,43 @@ class CatatanApiController extends Controller
         //return single catatan as a resource
         return new CatatanResource(true, 'Data Catatan Perjalanan Ditemukan!', $catatan);
     }
+    public function update(request $request, catatan $catatan){
 
+        //define validation rules
+        $validator = Validator::make($request->all(), [
+            'id_user'     => 'required',
+            'tanggal'     => 'required',
+            'jam'   => 'required',
+            'lokasi'   => 'required',
+            'suhu'   => 'required', 
+        ]);
+
+        //check if validation fails
+        if ($validator->fails()){
+            return response()->json($validator->errors(), 422);
+        }
+
+            //update post with new catatan
+            $catatan->update([
+                'nama_user'     => $request->nama_user,
+                'tanggal'   => $request->tanggal,
+                'jam'   => $request->jam,
+                'lokasi'   => $request->lokasi,
+                'suhu'   => $request->suhu,
+            ]);
+        
+            //return response
+       return new CatatanResource(true, 'Data catatan Berhasil Diubah!', $catatan);
+}
+
+        public function destroy(catatan $catatan)
+        {
+    
+            //delete post
+            $catatan->delete();
+    
+            //return response
+            return new CatatanResource(true, 'Data catatan Berhasil Dihapus!', null);
+        }
+        
 }
