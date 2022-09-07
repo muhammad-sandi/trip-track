@@ -5,12 +5,10 @@
 @section('content')
 <div class="container-fluid">
 
-
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3 d-flex justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary mt-auto mb-auto">Tabel Data Perjalanan</h6>
-            <a href="" class="btn btn-success float-right mt-auto mb-auto fw-bold">Tambah Data</a>
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">

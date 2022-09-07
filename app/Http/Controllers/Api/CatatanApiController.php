@@ -14,7 +14,7 @@ class CatatanApiController extends Controller
     public function index()
     {
         //get catatan
-        $catatan = Catatan::latest()->paginate(5);
+        $catatan = Catatan::latest()->get();
 
         //return collection of Catatan as a resource
         return new CatatanResource(true, 'List Data Catatan Perjalanan', $catatan);
@@ -61,7 +61,7 @@ class CatatanApiController extends Controller
 
         //define validation rules
         $validator = Validator::make($request->all(), [
-            'id_user'     => 'required',
+            // 'id_user'     => 'required',
             'tanggal'     => 'required',
             'jam'   => 'required',
             'lokasi'   => 'required',
@@ -83,7 +83,7 @@ class CatatanApiController extends Controller
             ]);
         
             //return response
-       return new CatatanResource(true, 'Data catatan Berhasil Diubah!', $catatan);
+        return new CatatanResource(true, 'Data catatan Berhasil Diubah!', $catatan);
 }
 
         public function destroy(catatan $catatan)
