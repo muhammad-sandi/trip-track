@@ -61,6 +61,10 @@ class CatatanApiController extends Controller
 
         //define validation rules
         $validator = Validator::make($request->all(), [
+<<<<<<< HEAD
+=======
+            // 'id_user'     => 'required',
+>>>>>>> a2fb4f6793903a87d54b5096104d63dd7578d74a
             'tanggal'     => 'required',
             'jam'   => 'required',
             'lokasi'   => 'required',
@@ -81,7 +85,7 @@ class CatatanApiController extends Controller
             ]);
         
             //return response
-       return new CatatanResource(true, 'Data catatan Berhasil Diubah!', $catatan);
+        return new CatatanResource(true, 'Data catatan Berhasil Diubah!', $catatan);
 }
 
         public function destroy(catatan $catatan)
