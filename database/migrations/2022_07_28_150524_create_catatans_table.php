@@ -15,7 +15,7 @@ class CreateCatatansTable extends Migration
     {
         Schema::create('catatans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user'); //ambil data tabel user
+            $table->foreignId('id_user');
             $table->date('tanggal');
             $table->time('jam');
             $table->string('lokasi');

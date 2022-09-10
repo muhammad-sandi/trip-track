@@ -39,7 +39,7 @@ class CatatanApiController extends Controller
 
        //create catatan
     $catatan = Catatan::create([
-        'id_user'     => $request->id_user,
+        'id_user'   => $request->id_user,
         'tanggal'   => $request->tanggal,
         'jam'   => $request->jam,
         'lokasi'   => $request->lokasi,
@@ -75,7 +75,6 @@ class CatatanApiController extends Controller
 
             //update post with new catatan
             $catatan->update([
-                'nama_user'     => $request->nama_user,
                 'tanggal'   => $request->tanggal,
                 'jam'   => $request->jam,
                 'lokasi'   => $request->lokasi,
