@@ -61,10 +61,7 @@ class CatatanApiController extends Controller
 
         //define validation rules
         $validator = Validator::make($request->all(), [
-<<<<<<< HEAD
-=======
             // 'id_user'     => 'required',
->>>>>>> a2fb4f6793903a87d54b5096104d63dd7578d74a
             'tanggal'     => 'required',
             'jam'   => 'required',
             'lokasi'   => 'required',
