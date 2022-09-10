@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 
 route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+route::get('/dataperjalanan', [CatatanController::class, 'index'])->name('dataperjalanan');
