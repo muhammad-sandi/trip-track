@@ -36,7 +36,7 @@
     <!--*******************
         Preloader start
     ********************-->
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div class="waviy">
             <span style="--i:1">R</span>
             <span style="--i:2">e</span>
@@ -49,7 +49,7 @@
             <span style="--i:9">n</span>
             <span style="--i:10">g</span>
         </div>
-    </div>
+    </div> --}}
     <!--*******************
         Preloader end
     ********************-->
@@ -120,18 +120,7 @@
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                                 <span class="ms-2">Profile </span>
-                            </a>
-                            <a href="email-inbox.html" class="dropdown-item ai-icon">
-                                <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18"
-                                    height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                <span class="ms-2">Inbox </span>
-                            </a>
+                            </a>    
                             <a href="/" class="dropdown-item ai-icon">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
                                     height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -146,11 +135,12 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-025-dashboard"></i>
-                            <span class="nav-text">Dashboard</span>
+                            <span class="nav-text">Catatan Perjalanan</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="index.html">Catatan Perjalanan</a></li>
-                            <li><a href="index-2.html">Isi Data Perjalanan</a></li>
+                            <li><a href="/catatan">Tabel Perjalanan</a></li>
+                            <li><a href="index-2.html">Tambah Perjalanan</a></li>
+                            <li><a href="index-2.html">Edit Perjalanan</a></li>
                         </ul>
 
                     </li>
@@ -168,6 +158,17 @@
                             </li>
                         </ul>
                     </li> --}}
+                        <li>
+                            <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                <i class="flaticon-022-copy"></i>
+                                <span class="nav-text">Users</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="page-login.html">Tabel User</a></li>
+                                <li><a href="page-register.html">Tambah User</a></li>
+                                <li><a href="page-register.html">Edit User</a></li>
+                            </ul>
+                        </li>
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-022-copy"></i>
                                 <span class="nav-text">Pages</span>
@@ -177,6 +178,7 @@
                                 <li><a href="page-register.html">Register</a></li>
                             </ul>
                         </li>
+                        
                 </ul>
                 <div class="copyright">
                     <p><strong>triptrack admin Dashboard</strong> © 2022 All Rights Reserved</p>
@@ -202,13 +204,13 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
+        {{-- <div class="footer">
 
             <div class="copyright">
                 <p>Copyright © Designed &amp; Developed by <a href="https://dexignlab.com/"
                         target="_blank">DexignLab</a> 2022</p>
             </div>
-        </div>
+        </div> --}}
         <!--**********************************
             Footer end
         ***********************************-->

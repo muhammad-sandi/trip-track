@@ -8,6 +8,7 @@ use App\Models\catatan;
 class CatatanController extends Controller
 {
     public function index(){
-        return view('catatan.viewcatatan');
+        $data = catatan::all();
+        return view('catatan.viewcatatan', compact('data'));
     }
 }
