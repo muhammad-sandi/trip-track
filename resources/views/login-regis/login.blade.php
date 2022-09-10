@@ -15,10 +15,10 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Dompet : Payment Admin Template</title>
+	<title>Trip Track &mdash; Login</title>
 	
 	<!-- FAVICONS ICON -->
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="images/triptrack.png">
     <link href="css/style.css" rel="stylesheet">
 
 </head>

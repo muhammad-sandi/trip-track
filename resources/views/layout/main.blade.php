@@ -19,7 +19,7 @@
     <title>Trip Track | @yield('wtitle')</title>
 
     <!-- FAVICONS ICON -->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/triptrack.png">
 
     <link href="./vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link rel="stylesheet" href="./vendor/nouislider/nouislider.min.css">
