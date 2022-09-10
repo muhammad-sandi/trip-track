@@ -61,7 +61,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img src="./images/triptrack.png" alt="" style="width:7rem; margin-left:-2rem;">
+                <img src="./images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
