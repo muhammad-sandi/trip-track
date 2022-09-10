@@ -15,9 +15,14 @@ use App\Http\Controllers\CatatanController;
 */
 
 Route::get('/', function () {
+    return view('login-regis.login');
+});
+
+Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-
+Route::get('/register', function () {
+    return view('login-regis.register');
+});
 route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
-route::get('/dataperjalanan', [CatatanController::class, 'index'])->name('dataperjalanan');

@@ -64,7 +64,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img src="./images/triptrack.png" alt="" style="width:7rem; margin-left:-2rem;">
+                <img src="./images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
@@ -132,7 +132,7 @@
                                 </svg>
                                 <span class="ms-2">Inbox </span>
                             </a>
-                            <a href="page-error-404.html" class="dropdown-item ai-icon">
+                            <a href="/" class="dropdown-item ai-icon">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
                                     height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
