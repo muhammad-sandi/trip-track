@@ -22,6 +22,12 @@ Route::get('/register', function () {
     return view('login-regis.register');
 });
 
+// profile
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+
 
 // dashboard
 Route::get('/dashboard', function () {

@@ -23,6 +23,10 @@
 
      <!-- Datatable -->
      <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+     <!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+	<link href="vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
      <!-- Custom Stylesheet -->
     <link href="./vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link rel="stylesheet" href="./vendor/nouislider/nouislider.min.css">
@@ -121,7 +125,7 @@
                                 </svg>
                                 <span class="ms-2">Profile </span>
                             </a>    
-                            <a href="/" class="dropdown-item ai-icon">
+                            <a href="/profile" class="dropdown-item ai-icon">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
                                     height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -144,20 +148,20 @@
                         </ul>
 
                     </li>
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-050-info"></i>
-                            <span class="nav-text">User</span>
+                            <span class="nav-text">Apps</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="app-profile.html">Profile</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                            <li><a href="profile">Profile</a></li>
+                            {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a> --}}
                                 <ul aria-expanded="false">
-                                    <li><a href="page-login.html">Login</a></li>
-                                    <li><a href="page-register.html">Register</a></li>
+                                    {{-- <li><a href="page-login.html">Login</a></li>
+                                    <li><a href="page-register.html">Register</a></li> --}}
                                 </ul>
                             </li>
                         </ul>
-                    </li> --}}
+                    </li>
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-022-copy"></i>

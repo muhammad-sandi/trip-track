@@ -21,8 +21,9 @@
                     <h4 class="card-title">Basic Datatable</h4>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive">  
                         <table id="example" class="display" style="min-width: 845px">
+                            <button type="button" class="btn btn-success ">Tambah Data Baru</button> 
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -51,7 +52,7 @@
                                             <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
                                             <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                         </div>												
-                                    </td>		
+                                    </td>		 
                                 </tr>
                                 @endforeach
                             </tbody>
