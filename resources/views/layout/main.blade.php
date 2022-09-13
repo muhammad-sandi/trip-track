@@ -164,7 +164,7 @@
                                 <span class="nav-text">Users</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="page-login.html">Tabel User</a></li>
+                                <li><a href="page-register.html">Tabel User</a></li>
                                 <li><a href="page-register.html">Tambah User</a></li>
                                 <li><a href="page-register.html">Edit User</a></li>
                             </ul>
@@ -174,8 +174,8 @@
                                 <span class="nav-text">Pages</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="page-login.html">Login</a></li>
-                                <li><a href="page-register.html">Register</a></li>
+                                <li><a href="{{route ('login')}}">Login</a></li>
+                                <li><a href="{{route ('register')}}">Register</a></li>
                             </ul>
                         </li>
                         
@@ -242,7 +242,7 @@
     <script src="./js/custom.min.js"></script>
     <script src="./js/dlabnav-init.js"></script>
     <script src="./js/demo.js"></script>
-    <script src="./js/styleSwitcher.js"></script>
+    {{-- <script src="./js/styleSwitcher.js"></script> --}}
 
     <!-- Datatable -->
     <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>

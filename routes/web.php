@@ -17,10 +17,10 @@ use App\Http\Controllers\CatatanController;
 // login register
 Route::get('/', function () {
     return view('login-regis.login');
-});
+})->name('login');
 Route::get('/register', function () {
     return view('login-regis.register');
-});
+})->name('register');
 
 
 // dashboard
