@@ -11,4 +11,13 @@ class CatatanController extends Controller
         $data = catatan::all();
         return view('catatan.viewcatatan', compact('data'));
     }
+
+    public function create(){
+        $data = catatan::all();
+        return view('catatan.addcatatan',compact('data'));
+    }
+    public function update(){
+        $data = catatan::all();
+        return view('catatan.updatecatatan',compact('data'));
+    }
 }

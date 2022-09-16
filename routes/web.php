@@ -28,7 +28,6 @@ Route::get('/profile', function () {
 });
 
 
-
 // dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -37,3 +36,5 @@ Route::get('/dashboard', function () {
 
 // viewcatatan
 route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+route::get('/addcatatan', [CatatanController::class, 'create'])->name('addcatatan');
+route::get('/updatecatatan', [CatatanController::class, 'update'])->name('updatecatatan');

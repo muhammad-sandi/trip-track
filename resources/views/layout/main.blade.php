@@ -143,8 +143,8 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="/catatan">Tabel Perjalanan</a></li>
-                            <li><a href="index-2.html">Tambah Perjalanan</a></li>
-                            <li><a href="index-2.html">Edit Perjalanan</a></li>
+                            <li><a href="/addcatatan">Tambah Perjalanan</a></li>
+                            <li><a href="/updatecatatan">Edit Perjalanan</a></li>
                         </ul>
 
                     </li>
