@@ -12,8 +12,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="34px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg>
                     </div>
                     <div>
-                        <h2 class="text-white invoice-num">2478</h2>
+                        {{-- <h2 class="text-white invoice-num"></h2> --}}
                         <span class="text-white fs-18">Catatan Perjalanan</span>
+                        <button class="btn btn-primary" type="submit">view</button>
                     </div>
                 </div>
             </div>
@@ -26,8 +27,9 @@
 
                     </div>
                     <div>
-                        <h2 class="text-white invoice-num">983</h2>
+                        {{-- <h2 class="text-white invoice-num"></h2> --}}
                         <span class="text-white fs-18">Isi Data Perjalanan</span>
+                        <button class="btn btn-primary" type="submit">view</button>
                     </div>
                 </div>
             </div>
@@ -40,8 +42,9 @@
 
                     </div>
                     <div>
-                        <h2 class="text-white invoice-num">1256</h2>
+                        {{-- <h2 class="text-white invoice-num"></h2> --}}
                         <span class="text-white fs-18">Tabel Data User</span>
+                        <button class="btn btn-primary" type="submit">view</button>
                     </div>
                 </div>
             </div>
@@ -53,8 +56,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg"  width="35px" height="34px" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M352 128c0 70.7-57.3 128-128 128s-128-57.3-128-128S153.3 0 224 0s128 57.3 128 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
                     </div>
                     <div>
-                        <h2 class="text-white invoice-num">652</h2>
+                        {{-- <h2 class="text-white invoice-num">652</h2> --}}
                         <span class="text-white fs-18">Tambah Data User</span>
+                        <button class="btn btn-primary" type="submit">view</button>
                     </div>
                 </div>
             </div>

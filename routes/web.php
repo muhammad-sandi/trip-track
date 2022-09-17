@@ -22,6 +22,11 @@ Route::get('/register', function () {
     return view('login-regis.register');
 })->name('register');
 
+// profile
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 
 // dashboard
 Route::get('/dashboard', function () {
@@ -31,3 +36,5 @@ Route::get('/dashboard', function () {
 
 // viewcatatan
 route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+route::get('/addcatatan', [CatatanController::class, 'create'])->name('addcatatan');
+route::get('/updatecatatan', [CatatanController::class, 'update'])->name('updatecatatan');
