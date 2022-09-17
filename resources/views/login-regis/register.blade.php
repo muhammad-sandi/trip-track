@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Dompet : Payment Admin Template</title>
+	<title>Trip Track | Register</title>
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -75,6 +75,6 @@
 <script src="vendor/global/global.min.js"></script>
 <script src="js/custom.min.js"></script>
 <script src="js/dlabnav-init.js"></script>
-<script src="js/styleSwitcher.js"></script>
+{{-- <script src="js/styleSwitcher.js"></script> --}}
 </body>
 </html>

@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Dompet : Payment Admin Template</title>
+	<title>Trip track | Login</title>
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -50,7 +50,7 @@
                                         </div>
                                         <div class="row d-flex justify-content-between mt-4 mb-2">
                                             <div class="mb-3">
-                                               <div class="form-check custom-checkbox ms-1">
+                                                <div class="form-check custom-checkbox ms-1">
 													<input type="checkbox" class="form-check-input" id="basic_checkbox_1">
 													<label class="form-check-label" for="basic_checkbox_1">Remember my preference</label>
 												</div>
@@ -83,6 +83,6 @@
     <script src="vendor/global/global.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/dlabnav-init.js"></script>
-	<script src="js/styleSwitcher.js"></script>
+	{{-- <script src="js/styleSwitcher.js"></script> --}}
 </body>
 </html>

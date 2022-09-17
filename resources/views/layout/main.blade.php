@@ -21,9 +21,9 @@
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 
-     <!-- Datatable -->
-     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-     <!-- Custom Stylesheet -->
+    <!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
     <link href="./vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link rel="stylesheet" href="./vendor/nouislider/nouislider.min.css">
     <!-- Style css -->
@@ -63,7 +63,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="" class="brand-logo">
                 <img src="./images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
@@ -133,8 +133,11 @@
                             </a>
                         </div>
                     </li>
+                    <li aria-expanded="false">
+                        <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-025-dashboard"></i>
+                            <i class="flaticon-017-clipboard"></i>
                             <span class="nav-text">Catatan Perjalanan</span>
                         </a>
                         <ul aria-expanded="false">
@@ -160,8 +163,8 @@
                     </li> --}}
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="flaticon-022-copy"></i>
-                                <span class="nav-text">Users</span>
+                                <i class="flaticon-044-menu"></i>
+                                <span class="nav-text">User</span>
                             </a>
                             <ul aria-expanded="false">
                                 <li><a href="page-register.html">Tabel User</a></li>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatatanController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +15,23 @@ use App\Http\Controllers\CatatanController;
 |
 */
 
-// login register
-Route::get('/', function () {
-    return view('login-regis.login');
-})->name('login');
-Route::get('/register', function () {
-    return view('login-regis.register');
-})->name('register');
-
-
 // dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
+})->name('dashboard');
+
+
+// login
+Route::get('/', [LoginController::class, 'login'])->name('login');
+
+
+// register
+Route::get('/register', [LoginController::class, 'register'])->name('register');
 
 
 // viewcatatan
-route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+Route::get('/catatan', [CatatanController::class, 'catatan'])->name('catatan');
+
+
+// viewuser
+
