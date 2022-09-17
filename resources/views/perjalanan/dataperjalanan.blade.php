@@ -3,7 +3,6 @@
 
 @section('content')
 <div class="container-fluid">
-				
     <div class="row page-titles">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active"><a href="javascript:void(0)">Table</a></li>
