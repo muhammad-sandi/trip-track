@@ -7,6 +7,10 @@ use App\Models\catatan;
 
 class CatatanController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
         $data = catatan::all();
         return view('catatan.viewcatatan', compact('data'));

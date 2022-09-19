@@ -109,10 +109,10 @@
                 <ul class="metismenu" id="menu">
                     <li class="dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="/images/profile/pic1.jpg" width="20" alt="">
+                            <img src="images/profile/profile.png" width="20" alt="">
                             <div class="header-info ms-3">
-                                <span class="font-w600 ">Hi,<b>Elina Monroe</b></span>
-                                <small class="text-end font-w400">Elina@gmail.com</small>
+                                <span class="font-w600 ">Hi,{{ Auth::user()->nama_user }}</span>
+                                <small class="text-end font-w400">{{ Auth::user()->email }}</small>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
@@ -125,7 +125,8 @@
                                 </svg>
                                 <span class="ms-2">Profile </span>
                             </a>    
-                            <a href="/profile" class="dropdown-item ai-icon">
+                            <a href="/profile" class="dropdown-item ai-icon" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
                                     height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -133,8 +134,12 @@
                                     <polyline points="16 17 21 12 16 7"></polyline>
                                     <line x1="21" y1="12" x2="9" y2="12"></line>
                                 </svg>
-                                <span class="ms-2">Logout </span>
+                                <span class="ms-2">Logout</span>
                             </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                     <li aria-expanded="false">
@@ -162,19 +167,9 @@
                                 {{-- <li><a href="page-register.html">Edit User</a></li> --}}
                             </ul>
                         </li>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="flaticon-022-copy"></i>
-                                <span class="nav-text">Pages</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="{{route ('login')}}">Login</a></li>
-                                <li><a href="{{route ('register')}}">Register</a></li>
-                            </ul>
-                        </li>
-                        
                 </ul>
                 <div class="copyright">
-                    <p><strong>triptrack admin Dashboard</strong> © 2022 All Rights Reserved</p>
+                    <p><strong>Trip Track Dashboard</strong> © 2022 All Rights Reserved</p>
                 </div>
             </div>
         </div>
