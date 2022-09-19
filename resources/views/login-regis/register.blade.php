@@ -15,8 +15,8 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Trip Track &mdash; Register</title>
-	
+	<title>Trip Track | Register</title>
+    
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/triptrack.png">
     <link href="css/style.css" rel="stylesheet">
@@ -75,6 +75,6 @@
 <script src="vendor/global/global.min.js"></script>
 <script src="js/custom.min.js"></script>
 <script src="js/dlabnav-init.js"></script>
-<script src="js/styleSwitcher.js"></script>
+{{-- <script src="js/styleSwitcher.js"></script> --}}
 </body>
 </html>
