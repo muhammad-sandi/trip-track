@@ -1,15 +1,16 @@
 @extends('layout.main')
 @section('wtitle', 'Profile')
+@section('dashtitle', 'Profile')
 
 @section('content')
 
    {{-- row --}}
-    <div class="row page-titles">
+    {{-- <div class="row page-titles">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active"><a href="javascript:void(0)">App</a></li>
             <li class="breadcrumb-item"><a href="javascript:void(0)">Profile</a></li>
         </ol>
-    </div>
+    </div> --}}
 
     <div class="row">
         <div class="col-lg-12">

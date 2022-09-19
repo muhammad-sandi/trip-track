@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatatanController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,27 +16,33 @@ use App\Http\Controllers\LoginController;
 |
 */
 
+// login
+Route::get('/', [LoginController::class, 'login'])->name('login');
+
+// register
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+
 // profile
 Route::get('/profile', function () {
     return view('profile');
-});
-
+})->name('profile');
 
 // dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+// catatan perjalanan
+Route::get('/catatan', [CatatanController::class, 'index'])->name('viewcatatan');
 
-// login
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/catatan/addcatatan', [CatatanController::class, 'create'])->name('addcatatan');
+Route::post('/insertcatatan', [CatatanController::class, 'store'])->name('insertcatatan');
 
+Route::get('/catatan/editcatatan/{id}', [CatatanController::class, 'edit'])->name('editcatatan');
+Route::post('/updatecatatan/{id}', [CatatanController::class, 'update'])->name('updatecatatan');
 
-// register
-Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::get('deletecatatan/{id}', [CatatanController::class, 'destroy'])->name('deletecatatan');
 
+// tabel user
+Route::get('/user', [UserController::class, 'index'])->name('viewuser');
 
-// viewcatatan
-route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
-route::get('/addcatatan', [CatatanController::class, 'create'])->name('addcatatan');
-route::get('/updatecatatan', [CatatanController::class, 'update'])->name('updatecatatan');

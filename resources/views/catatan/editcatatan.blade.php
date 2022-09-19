@@ -1,7 +1,7 @@
 @extends('layout.main')
 
-@section('wtitle', 'Tambah Perjalanan')
-@section('dashtitle', 'Tambah Perjalanan')
+@section('wtitle', 'Edit Perjalanan')
+@section('dashtitle', 'Edit Perjalanan')
 
 @section('content')
 <div class="container-fluid">
@@ -10,12 +10,12 @@
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <h4 class="card-title">Form Tambah Data Perjalanan</h4>
-                    <a href="{{route ('viewcatatan')}}"><div class="flaticon-082-share"> Back to tabel perjalanan</div></a>
+                    <h4 class="card-title">Form Edit Data Perjalanan</h4>
+                    <a href="{{route ('viewcatatan')}}"><div class="flaticon-082-share"> Back to tabel catatan</div></a>
                 </div>
                 <div class="card-body">
                     <div class="form-validation">
-                        <form class="needs-validation" novalidate="" method="POST" action="{{route ('insertcatatan')}}">
+                        <form class="needs-validation" novalidate="" method="POST" action="/updatecatatan/{{$data->id}}">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
@@ -24,7 +24,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
-                                            <input type="text" class="form-control" id="validationCustom01" placeholder="Masukkan tanggal..." name="user_id" required="">
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="Masukkan tanggal..." name="user_id" required="" value="{{$data->user_id}}">
                                             <div class="invalid-feedback">
                                                 Harap masukkan tanggal
                                             </div>
@@ -35,7 +35,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
-                                            <input type="date" class="form-control" id="validationCustom01" placeholder="Masukkan tanggal..." name="tanggal" required="">
+                                            <input type="date" class="form-control" id="validationCustom01" placeholder="Masukkan tanggal..." name="tanggal" required="" value="{{$data->tanggal}}">
                                             <div class="invalid-feedback">
                                                 Harap masukkan tanggal
                                             </div>
@@ -46,7 +46,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
-                                            <input type="time" class="form-control" id="validationCustom01" placeholder="Masukkan Jam..." name="jam" required="">
+                                            <input type="time" class="form-control" id="validationCustom01" placeholder="Masukkan Jam..." name="jam" required="" value="{{$data->jam}}">
                                             <div class="invalid-feedback">
                                                 Harap masukkan jam
                                             </div>
@@ -57,7 +57,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
-                                            <textarea type="text" class="form-control" id="validationCustom01" placeholder="Masukkan Lokasi..." name="lokasi" required=""></textarea>
+                                            <textarea type="text" class="form-control" id="validationCustom01" placeholder="Masukkan Lokasi..." name="lokasi" required="" value="{{$data->lokasi}}">{{$data->lokasi}}</textarea>
                                             <div class="invalid-feedback">
                                                 Harap masukkan lokasi
                                             </div>
@@ -68,7 +68,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
-                                            <input type="text" class="form-control" id="validationCustom01" placeholder="Masukkan Suhu..." name="suhu" required="">
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="Masukkan Suhu..." name="suhu" required="" value="{{$data->suhu}}">
                                             <div class="invalid-feedback">
                                                 Harap masukkan suhu
                                             </div>
