@@ -25,7 +25,7 @@ class CatatanController extends Controller
             'suhu' => 'required'
         ]);
         catatan::create($request->all());
-        return redirect()->route('catatan');
+        return redirect()->route('viewcatatan');
     }
 
     // edit perjalanan
@@ -37,13 +37,13 @@ class CatatanController extends Controller
     public function update(Request $request, $id){
         $data = catatan::find($id);
         $data->update($request->all());
-        return redirect()->route('catatan');
+        return redirect()->route('viewcatatan');
     }
 
     // delete perjalanan
     public function destroy($id){
         $data= catatan::find($id);
         $data->delete();
-        return redirect()->route('catatan');
+        return redirect()->route('viewcatatan');
     }
 }
