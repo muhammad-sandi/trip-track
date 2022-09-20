@@ -42,10 +42,10 @@
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                 
-                                        <div class="row mb-3">
-                                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                        <div class="row mb-3 d-grid">
+                                            <label for="email" class="col-md-4 col-form-label ms-4">{{ __('Email Address') }}</label>
                                 
-                                            <div class="col-md-7">
+                                            <div class="col-md-10 ms-5">
                                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                                                     value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 
@@ -57,10 +57,10 @@
                                             </div>
                                         </div>
                                 
-                                        <div class="row mb-3">
-                                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                                        <div class="row mb-3 d-grid">
+                                            <label for="password" class="col-md-4 col-form-label ms-4">{{ __('Password') }}</label>
                                 
-                                            <div class="col-md-7">
+                                            <div class="col-md-10 ms-5">
                                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                                                     name="password" required autocomplete="current-password">
                                 
@@ -72,9 +72,9 @@
                                             </div>
                                         </div>
                                 
-                                        <div class="row mb-3">
-                                            <div class="col-md-6 offset-md-4">
-                                                <div class="form-check">
+                                        <div class="row mb-3 d-grid">
+                                            <div class="col-md-6">
+                                                <div class="form-check ms-5 mt-2">
                                                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
                                                         {{ old('remember') ? 'checked' : '' }}>
                                 
@@ -86,8 +86,8 @@
                                         </div>
                                 
                                         <div class="row mb-0">
-                                            <div class="col-md-0 offset-md-4">
-                                                <button type="submit" class="btn btn-primary pb-0 pt-0">
+                                            <div class="col-md-0 d-flex justify-content-end">
+                                                <button type="submit" class="btn btn-primary pb-0 pt-0 me-4 w-25">
                                                     {{ __('Login') }}
                                                 </button>
                                 
@@ -99,7 +99,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
+                                    <div class="new-account mt-3 d-flex justify-content-center">
                                         <p>Don't have an account? <a class="text-primary" href="/register">Sign up</a>
                                         </p>
                                     </div>

@@ -40,7 +40,7 @@
     <!--*******************
         Preloader start
     ********************-->
-    {{-- <div id="preloader">
+    <div id="preloader" class="bg-dark">
         <div class="waviy">
             <span style="--i:1">R</span>
             <span style="--i:2">e</span>
@@ -53,7 +53,7 @@
             <span style="--i:9">n</span>
             <span style="--i:10">g</span>
         </div>
-    </div> --}}
+    </div>
     <!--*******************
         Preloader end
     ********************-->
