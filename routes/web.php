@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatatanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\UserController;
 */
 
 // login
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/', [CatatanController::class, 'index']);
 
 // register
 Route::get('/register', [LoginController::class, 'register'])->name('register');
@@ -28,9 +29,7 @@ Route::get('/profile', function () {
 })->name('profile');
 
 // dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // catatan perjalanan
 Route::get('/catatan', [CatatanController::class, 'index'])->name('viewcatatan');
@@ -46,3 +45,7 @@ Route::get('deletecatatan/{id}', [CatatanController::class, 'destroy'])->name('d
 // tabel user
 Route::get('/user', [UserController::class, 'index'])->name('viewuser');
 
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
