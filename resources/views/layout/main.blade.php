@@ -24,7 +24,7 @@
     <!-- Datatable -->
         <link href="/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- FAVICONS ICON -->
-	    <link rel="/shortcut icon" type="image/png" href="images/favicon.png">
+	    <link rel="/shortcut icon" type="image/png" href="../images/favicon.png">
 	    <link href="/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	    <link href="/vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
     <!-- Custom Stylesheet -->
@@ -68,7 +68,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="" class="brand-logo">
-                <img src="/images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
+                <img src="../images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
@@ -109,9 +109,9 @@
                 <ul class="metismenu" id="menu">
                     <li class="dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="images/profile/profile.png" width="20" alt="">
+                            <img src="../images/profile/profile.png" width="20" alt="">
                             <div class="header-info ms-3">
-                                <span class="font-w600 ">Hi,{{ Auth::user()->nama_user }}</span>
+                                <span class="font-w600 ">Hi, {{ Auth::user()->nama_user }}</span>
                                 <small class="text-end font-w400">{{ Auth::user()->email }}</small>
                             </div>
                         </a>
