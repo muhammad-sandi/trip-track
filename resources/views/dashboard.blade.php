@@ -1,10 +1,4 @@
-@if(auth()->user()->role == 'admin') 
-    @extends('layout.main')
-@endif
-
-@if(auth()->user()->role == 'user') 
-    @extends('layout.mainuser')
-@endif
+@extends('layout.main')
 
 @section('wtitle', 'Dashboard')
 @section('dashtitle', 'Dashboard')
