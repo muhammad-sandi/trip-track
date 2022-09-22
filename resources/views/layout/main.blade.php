@@ -142,10 +142,10 @@
                             </form>
                         </div>
                     </li>
-                    <li aria-expanded="false">
-                        <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
-                    </li>
-            @if(auth()->user()->role == 'admin')                    
+            @if(auth()->user()->role == 'admin')
+                <li aria-expanded="false">
+                    <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
+                </li>                  
                 <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-017-clipboard"></i>
                         <span class="nav-text">Catatan Perjalanan</span>
@@ -168,6 +168,9 @@
                 </li>
             @endif
             @if(auth()->user()->role == 'user')
+                <li aria-expanded="false">
+                    <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
+                </li>
                 <li aria-expanded="false">
                     <a href="{{route ('viewcatatan')}}" class="nav-text"> <i class="flaticon-017-clipboard"></i> Tabel Perjalanan</a>
                 </li>
