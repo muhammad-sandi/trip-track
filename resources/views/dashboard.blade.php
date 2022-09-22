@@ -57,7 +57,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-xxl-5 col-sm-6">
-                <a href="{{route ('adduser')}}">
+                <a href="#">
                     <div class="card bg-secondary invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">

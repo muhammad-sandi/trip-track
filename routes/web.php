@@ -44,12 +44,13 @@ Route::post('/updatecatatan/{id}', [CatatanController::class, 'update'])->name('
 Route::get('deletecatatan/{id}', [CatatanController::class, 'destroy'])->name('deletecatatan');
 
 // tabel user
-Route::get('/user', [UserController::class, 'index'])->name('viewuser');
+
+Route::get('/user', [UserController::class, 'index'])->name('viewuser')->middleware('checkRole:admin');
 
 Route::get('/user/edituser/{id}', [UserController::class, 'edit'])->name('edituser');
 Route::post('/updateuser/{id}', [UserController::class, 'update'])->name('updateuser');
 
-Route::get('/deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser');
+Route::get('/deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser')->middleware('checkRole:admin');
 
 Auth::routes();
 

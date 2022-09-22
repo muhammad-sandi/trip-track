@@ -68,7 +68,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="" class="brand-logo">
-                <img src="{{ asset ('images/triptrack.png')}}" alt="" style="width:4rem; margin-right:2rem;">
+                <img src="images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
@@ -156,7 +156,7 @@
                         </ul>
 
                     </li>
-                        <li>
+                        <li>@if(auth()->user()->role == 'admin') 
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-044-menu"></i>
                                 <span class="nav-text">User</span>
@@ -166,7 +166,7 @@
                                 {{-- <li><a href="{{ route ('adduser')}}">Tambah User</a></li> --}}
                                 {{-- <li><a href="page-register.html">Edit User</a></li> --}}
                             </ul>
-                        </li>
+                        </li>@endif
                 </ul>
                 <div class="copyright">
                     <p><strong>Trip Track Dashboard</strong> © 2022 All Rights Reserved</p>
