@@ -21,7 +21,8 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [CatatanController::class, 'index']);
 
 // register
-Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
 // profile
 Route::get('/profile', function () {
@@ -45,6 +46,10 @@ Route::get('deletecatatan/{id}', [CatatanController::class, 'destroy'])->name('d
 // tabel user
 Route::get('/user', [UserController::class, 'index'])->name('viewuser');
 
+Route::get('/user/edituser/{id}', [UserController::class, 'edit'])->name('edituser');
+Route::post('/updateuser/{id}', [UserController::class, 'update'])->name('updateuser');
+
+Route::get('/deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser');
 
 Auth::routes();
 

@@ -42,16 +42,16 @@
     ********************-->
     <div id="preloader" class="bg-dark">
         <div class="waviy">
-            <span style="--i:1">R</span>
-            <span style="--i:2">e</span>
-            <span style="--i:3">f</span>
-            <span style="--i:4">r</span>
-            <span style="--i:5">e</span>
-            <span style="--i:6">s</span>
-            <span style="--i:7">h</span>
-            <span style="--i:8">i</span>
+            <span style="--i:1">L</span>
+            <span style="--i:2">o</span>
+            <span style="--i:3">a</span>
+            <span style="--i:4">d</span>
+            <span style="--i:5">i</span>
+            <span style="--i:6">n</span>
+            <span style="--i:7">g</span>
+            {{-- <span style="--i:8">i</span>
             <span style="--i:9">n</span>
-            <span style="--i:10">g</span>
+            <span style="--i:10">g</span> --}}
         </div>
     </div>
     <!--*******************
@@ -68,7 +68,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="" class="brand-logo">
-                <img src="../images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
+                <img src="{{ asset ('images/triptrack.png')}}" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
@@ -109,7 +109,7 @@
                 <ul class="metismenu" id="menu">
                     <li class="dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="../images/profile/profile.png" width="20" alt="">
+                            <img src="../../images/profile/profile.png" width="20" alt="">
                             <div class="header-info ms-3">
                                 <span class="font-w600 ">Hi, {{ Auth::user()->nama_user }}</span>
                                 <small class="text-end font-w400">{{ Auth::user()->email }}</small>
@@ -163,7 +163,7 @@
                             </a>
                             <ul aria-expanded="false">
                                 <li><a href="{{ route ('viewuser')}}">Tabel User</a></li>
-                                <li><a href="#">Tambah User</a></li>
+                                {{-- <li><a href="{{ route ('adduser')}}">Tambah User</a></li> --}}
                                 {{-- <li><a href="page-register.html">Edit User</a></li> --}}
                             </ul>
                         </li>

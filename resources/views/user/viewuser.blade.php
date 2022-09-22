@@ -20,7 +20,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <h4 class="card-title">Tabel Data User</h4>
-                    <a class="btn btn-success" href="">Tambah Data Baru</a> 
+                    {{-- <a class="btn btn-success" href="{{route ('adduser')}}">Tambah Data Baru</a>  --}}
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -32,7 +32,7 @@
                                     <th>Nama</th>
                                     <th>NIK</th>
                                     <th>Email</th>
-                                    <th>Password</th>
+                                    {{-- <th>Password</th> --}}
                                     <th>Updated At</th>
                                     <th>Action</th>
                                 </tr>
@@ -48,12 +48,12 @@
                                     <td>{{$row->nama_user}}</td>
                                     <td>{{$row->nik}}</td>
                                     <td>{{$row->email}}</td>
-                                    <td>{{$row->password}}</td>
+                                    {{-- <td>{{$row->password}}</td> --}}
                                     <td>{{$row->updated_at}}</td>
                                     <td>
                                         <div class="d-flex">
-                                            <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                            <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                            <a href="/user/edituser/{{$row->id}}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                            <a href="/deleteuser/{{$row->id}}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                         </div>												
                                     </td>		
                                 </tr>

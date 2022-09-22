@@ -43,6 +43,19 @@
                                         @csrf
                             
                                         <div class="row mb-3 d-grid">
+                                            <label for="nik" class="col-md-4 col-form-label text-start ms-4">{{ __('Nomor NIK') }}</label>
+                            
+                                            <div class="col-md-11 ms-4">
+                                                <input id="nik" type="text" class="form-control bg-info p-2 bg-opacity-10 @error('nik') is-invalid @enderror" placeholder="ex : 327656781234 " name="nik" value="{{ old('nik') }}" required autocomplete="nik" autofocus>
+                            
+                                                @error('nik')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 d-grid">
                                             <label for="nama_user" class="col-md-4 col-form-label text-start ms-4">{{ __('Nama Lengkap') }}</label>
                             
                                             <div class="col-md-11 ms-4">
