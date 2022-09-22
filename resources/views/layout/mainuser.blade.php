@@ -40,7 +40,7 @@
     <!--*******************
         Preloader start
     ********************-->
-    <div id="preloader" >
+    <div id="preloader">
         <div class="waviy">
             <span style="--i:1">L</span>
             <span style="--i:2">o</span>
@@ -68,7 +68,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="" class="brand-logo">
-                <img src="images/triptrack.png" alt="" style="width:4rem; margin-right:2rem;">
+                <img src="{{ asset ('images/triptrack.png')}}" alt="" style="width:4rem; margin-right:2rem;">
                 <h2 style="margin-left:-1rem; font-weight:700;">Trip Track</h2>
             </a>
             {{-- <div class="nav-control">
@@ -142,43 +142,15 @@
                             </form>
                         </div>
                     </li>
-                    
-                    @if(auth()->user()->role == 'admin')
                     <li aria-expanded="false">
-                        <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
-                    </li>        
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="flaticon-017-clipboard"></i>
-                        <span class="nav-text">Catatan Perjalanan</span>
-                    </a>
-                    <ul aria-expanded="false">
-                        <li><a href="{{ route ('viewcatatan')}}">Tabel Perjalanan</a></li>
-                        <li><a href="{{ route ('addcatatan')}}">Tambah Perjalanan</a></li>
-                        {{-- <li><a href="/updatecatatan">Edit Perjalanan</a></li> --}}
-                    </ul>
-                </li>
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-044-menu"></i>
-                            <span class="nav-text">User</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route ('viewuser')}}">Tabel User</a></li>
-                            {{-- <li><a href="{{ route ('adduser')}}">Tambah User</a></li> --}}
-                            {{-- <li><a href="page-register.html">Edit User</a></li> --}}
-                        </ul>
-                </li>
-            @endif
-            @if(auth()->user()->role == 'user')
-            <li aria-expanded="false">
-                <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
-            </li>
-                <li aria-expanded="false">
-                    <a href="{{route ('viewcatatan')}}" class="nav-text"> <i class="flaticon-017-clipboard"></i> Tabel Perjalanan</a>
-                </li>
-                <li aria-expanded="false">
-                    <a href="{{route ('addcatatan')}}" class="nav-text"> <i class="flaticon-044-menu"></i> Tambah Perjalanan</a>
-                </li>
-            @endif
+                        <a href="{{route ('dashboard')}} " class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
+                    </li>
+                    <li aria-expanded="false">
+                        <a href="{{route ('viewcatatan')}}" class="nav-text"> <i class="flaticon-017-clipboard"></i> Tabel Perjalanan</a>
+                    </li>
+                    <li aria-expanded="false">
+                        <a href="{{route ('addcatatan')}}" class="nav-text"> <i class="flaticon-044-menu"></i> Tambah Perjalanan</a>
+                    </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>Trip Track Dashboard</strong> © 2022 All Rights Reserved</p>

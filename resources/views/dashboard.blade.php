@@ -1,4 +1,11 @@
-@extends('layout.main')
+@if(auth()->user()->role == 'admin') 
+    @extends('layout.main')
+@endif
+
+@if(auth()->user()->role == 'user') 
+    @extends('layout.mainuser')
+@endif
+
 @section('wtitle', 'Dashboard')
 @section('dashtitle', 'Dashboard')
 
@@ -39,7 +46,8 @@
                 </a>
             </div>
         </div>
-        <div class="bottom d-flex justify-content-around mt-3">
+    @if(auth()->user()->role == 'admin')
+        <div class="bottom d-flex float-start mt-3" style="margin-left: 2.7vw;">
             <div class="col-xl-3 col-xxl-5 col-sm-6">
                 <a href="{{route('viewuser')}}">
                     <div class="card bg-info invoice-card">
@@ -56,7 +64,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xl-3 col-xxl-5 col-sm-6">
+            {{-- <div class="col-xl-3 col-xxl-5 col-sm-6">
                 <a href="#">
                     <div class="card bg-secondary invoice-card">
                         <div class="card-body d-flex">
@@ -70,8 +78,9 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> --}}
         </div>
-    </div>
+       @endif
+</div>
 </div>
 @endsection

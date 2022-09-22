@@ -5,6 +5,8 @@ use App\Http\Controllers\CatatanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashuserController;
+use App\Http\Controllers\CatatanuserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +57,21 @@ Route::get('/deleteuser/{id}', [UserController::class, 'destroy'])->name('delete
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+// // ?? tampilan user
+
+// // !! dashbaord
+// Route::get('/dashuser', [DashuserController::class, 'index'])->name('dashuser');
+
+// // !! catatan
+// Route::get('/usercatatan', [CatatanuserController::class, 'index'])->name('usercatatan');
+
+// Route::get('/usercatatan/useradd', [CatatanuserController::class, 'create'])->name('useradd');
+// Route::post('/userinsert', [CatatanuserController::class, 'store'])->name('userinsert');
+
+// Route::get('/usercatatan/useredit/{id}', [CatatanuserController::class, 'edit'])->name('useredit');
+// Route::post('/userupdate/{id}', [CatatanuserController::class, 'update'])->name('userupdate');
+
+// // ?? end tampilan user
