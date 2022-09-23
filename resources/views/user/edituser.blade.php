@@ -1,7 +1,7 @@
 @extends('layout.main')
 
-@section('wtitle', 'Tambah User')
-@section('dashtitle', 'Tambah User')
+@section('wtitle', 'Edit User')
+@section('dashtitle', 'Edit User')
 
 @section('content')
 <div class="container-fluid">
@@ -10,7 +10,7 @@
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <h4 class="card-title">Form Tambah Data User</h4>
+                    <h4 class="card-title">Form Edit Data User</h4>
                     <a href="{{route ('viewuser')}}"><div class="flaticon-082-share"> Back to tabel user</div></a>
                 </div>
                 <div class="card-body">
@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="mb-3 row">
-                                        <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">Tambah Foto
+                                        <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">Edit Foto Profil
                                         </label>
                                         <div class="container-fluid" style="margin-top: -1.5vw">
                                             <input type="file" class="form-file-input form-control" id="validationCustom01" placeholder="Masukkan foto..." name="foto_user" value="{{$data->foto_user}}">
