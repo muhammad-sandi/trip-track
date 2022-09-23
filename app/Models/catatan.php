@@ -16,4 +16,8 @@ class catatan extends Model
         'lokasi',
         'suhu'
     ];
+
+    public function catatanuser(){
+        return $this->belongsTo(user::class, 'user_id', 'id');
+    }
 }

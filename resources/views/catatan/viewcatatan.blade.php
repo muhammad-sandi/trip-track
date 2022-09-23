@@ -28,11 +28,13 @@
                             <thead>
                                 <tr class="text-center">
                                     <th>No</th>
+                                @if (auth()->user()->role == 'admin')    
                                     <th>Nama User</th>
-                                    <th>Tanggal</th>
-                                    <th>Jam</th>
+                                @endif
                                     <th>Lokasi</th>
                                     <th>Suhu</th>
+                                    <th>Jam</th>
+                                    <th>Tanggal</th>
                                     <th>Updated at</th>
                                     <th>Action</th>
                                 </tr>
@@ -44,11 +46,13 @@
                                 @foreach ($data as $index => $row)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$row->user_id}}</td>
-                                    <td>{{$row->tanggal}}</td>
-                                    <td>{{$row->jam}}</td>
+                                @if (auth()->user()->role == 'admin')
+                                    <td>{{$row->catatanuser->nama_user}}</td>
+                                @endif
                                     <td>{{$row->lokasi}}</td>
                                     <td>{{$row->suhu}}°C</td>
+                                    <td>{{$row->jam}}</td>
+                                    <td>{{$row->tanggal}}</td>
                                     <td>{{$row->updated_at}}</td>
                                     <td>
                                         <div class="d-flex">
@@ -57,9 +61,10 @@
                                                     class="fas fa-pencil-alt"></i></a>
 
                                             @if(auth()->user()->role == 'admin')
-                                            <a href="/deletecatatan/{{$row->id}}"
-                                                class="btn btn-danger shadow btn-xs sharp"><i
-                                                    class="fa fa-trash"></i></a>@endif
+                                                <a href="/deletecatatan/{{$row->id}}" class="btn btn-danger shadow btn-xs sharp">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>

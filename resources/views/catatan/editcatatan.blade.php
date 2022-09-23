@@ -19,7 +19,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="mb-3 row">
+                                    {{-- <div class="mb-3 row">
                                         <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">id user
                                             <span class="text-danger">*</span>
                                         </label>
@@ -29,7 +29,7 @@
                                                 Harap masukkan tanggal
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="mb-3 row">
                                         <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">Tanggal
                                             <span class="text-danger">*</span>

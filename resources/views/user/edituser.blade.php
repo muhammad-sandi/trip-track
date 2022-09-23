@@ -1,8 +1,13 @@
 @extends('layout.main')
 
-@section('wtitle', 'Tambah User')
-@section('dashtitle', 'Tambah User')
-
+@if (auth()->user()->role == 'admin')    
+    @section('wtitle', 'Edit User')
+    @section('dashtitle', 'Edit User')
+@else
+    @section('wtitle', 'Edit profil')
+    @section('dashtitle', 'Edit profil')
+@endif
+    
 @section('content')
 <div class="container-fluid">
     <!-- row -->
@@ -10,7 +15,11 @@
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <h4 class="card-title">Form Tambah Data User</h4>
+                    @if (auth()->user()->role == 'admin')
+                        <h4 class="card-title">Form Edit Data User</h4>
+                    @else
+                        <h4 class="card-title">Form Edit Profil</h4>
+                    @endif
                     <a href="{{route ('viewuser')}}"><div class="flaticon-082-share"> Back to tabel user</div></a>
                 </div>
                 <div class="card-body">
@@ -62,6 +71,22 @@
                                             </div>
                                         </div>
                                     </div>
+                                @if (auth()->user()->role == 'admin')        
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">Role
+                                        </label>
+                                        <div class="container-fluid" style="margin-top: -1.5vw" tabindex="0">
+                                            <select class="form-select nice-select default-select form-control wide" aria-label="Default select example" name='role'>
+                                                <option selected>{{$data->role}}</option>
+                                                <option value="admin">Admin</option>
+                                                <option value="user">User</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Harap masukkan email
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
                                     {{-- <div class="mb-3 row">
                                         <label class="col-form-label fw-bold" for="validationCustom01" style="margin-left: 2vw">Password
                                             <span class="text-danger">*</span>

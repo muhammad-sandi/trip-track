@@ -53,7 +53,12 @@ class UserController extends Controller
     public function update(Request $request, $id){
         $data = user::find($id);
         $data->update($request->all());
-        return redirect()->route('viewuser');
+        if (auth()->user()->role == 'admin') {
+            return redirect()->route('viewuser');
+        } else {
+            return redirect()->route('profile');
+        }
+        
     }
 
     // delete perjalanan
