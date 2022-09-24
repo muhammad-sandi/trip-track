@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashuserController;
 use App\Http\Controllers\CatatanuserController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,36 +23,28 @@ use App\Http\Controllers\CatatanuserController;
 // login
 Route::get('/', [CatatanController::class, 'index']);
 
-// register
+// Register
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
-// profile
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
-
-// dashboard
+// Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-// catatan perjalanan
-Route::get('/catatan', [CatatanController::class, 'index'])->name('viewcatatan');
+// Profile
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
+// Catatan Perjalanan
+Route::get('/catatan', [CatatanController::class, 'index'])->name('viewcatatan');
 Route::get('/catatan/addcatatan', [CatatanController::class, 'create'])->name('addcatatan');
 Route::post('/insertcatatan', [CatatanController::class, 'store'])->name('insertcatatan');
-
 Route::get('/catatan/editcatatan/{id}', [CatatanController::class, 'edit'])->name('editcatatan');
 Route::post('/updatecatatan/{id}', [CatatanController::class, 'update'])->name('updatecatatan');
-
 Route::get('deletecatatan/{id}', [CatatanController::class, 'destroy'])->name('deletecatatan');
 
-// tabel user
-
+// Tabel User
 Route::get('/user', [UserController::class, 'index'])->name('viewuser')->middleware('checkRole:admin');
-
 Route::get('/user/edituser/{id}', [UserController::class, 'edit'])->name('edituser');
 Route::post('/updateuser/{id}', [UserController::class, 'update'])->name('updateuser');
-
 Route::get('/deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser')->middleware('checkRole:admin');
 
 Auth::routes();

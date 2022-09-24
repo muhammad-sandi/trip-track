@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('wtitle', 'Tabel User')
-@section('wtitle', 'Tabel User')
+@section('dashtitle', 'Tabel User')
 
 @section('content')
 <div class="container-fluid">
@@ -32,7 +32,7 @@
                                     <th>Nama</th>
                                     <th>NIK</th>
                                     <th>Email</th>
-                                    {{-- <th>Password</th> --}}
+                                    <th>Role</th>
                                     <th>Updated At</th>
                                     <th>Action</th>
                                 </tr>
@@ -44,11 +44,13 @@
                                 @foreach ($data as $index => $row)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$row->foto_user}}</td>
+                                    <td>
+                                        <img src="{{asset('foto_user/'.$row->foto_user)}}" alt="" width="60px">
+                                    </td>
                                     <td>{{$row->nama_user}}</td>
                                     <td>{{$row->nik}}</td>
                                     <td>{{$row->email}}</td>
-                                    {{-- <td>{{$row->password}}</td> --}}
+                                    <td>{{$row->role}}</td>
                                     <td>{{$row->updated_at}}</td>
                                     <td>
                                         <div class="d-flex">
