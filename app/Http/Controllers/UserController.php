@@ -44,7 +44,7 @@ class UserController extends Controller
     //     return redirect()->route('viewuser');
     // }
 
-    // edit perjalanan
+    // edit user
     public function edit($id){
         $data = user::find($id);
         return view('user.edituser', compact('data'));
@@ -53,15 +53,24 @@ class UserController extends Controller
     public function update(Request $request, $id){
         $data = user::find($id);
         $data->update($request->all());
+        if($request->hasFile('foto_user')){
+            $request->file('foto_user')->move('foto_user/', $request->file('foto_user')->getClientOriginalName());
+            $data->foto_user = $request->file('foto_user')->getClientOriginalName();
+            $data->save();
+        }
+
         if (auth()->user()->role == 'admin') {
             return redirect()->route('viewuser');
         } else {
             return redirect()->route('profile');
         }
+
+        // $file_name = $request->image->getClientOriginalName();
+        // $request->image->storeAs('foto_user', $file_name);
         
     }
 
-    // delete perjalanan
+    // delete user
     public function destroy($id){
         $data= user::find($id);
         $data->delete();

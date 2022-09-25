@@ -44,7 +44,9 @@
                                 @foreach ($data as $index => $row)
                                 <tr>
                                     <td>{{$no++}}</td>
-                                    <td>{{$row->foto_user}}</td>
+                                    <td>
+                                        <img src="{{asset('foto_user/'.$row->foto_user)}}" alt="" width="60px">
+                                    </td>
                                     <td>{{$row->nama_user}}</td>
                                     <td>{{$row->nik}}</td>
                                     <td>{{$row->email}}</td>

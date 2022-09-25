@@ -109,7 +109,7 @@
                 <ul class="metismenu" id="menu">
                     <li class="dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="../../images/profile/profile.png" width="20" alt="">
+                            <img src="/foto_user/{{ Auth::user()->foto_user }}" width="20" alt="">
                             <div class="header-info ms-3">
                                 <span class="font-w600 ">Hi, {{ Auth::user()->nama_user }}</span>
                                 <small class="text-end font-w400">{{ Auth::user()->email }}</small>
@@ -156,26 +156,29 @@
                         {{-- <li><a href="/updatecatatan">Edit Perjalanan</a></li> --}}
                     </ul>
                 </li>
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <li aria-expanded="false">
+                    <a href=" {{route ('viewuser')}}" class="nav-text"> <i class="flaticon-044-menu"></i>Tabel User</a>
+                </li>
+                {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-044-menu"></i>
                             <span class="nav-text">User</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route ('viewuser')}}">Tabel User</a></li>
-                            {{-- <li><a href="{{ route ('adduser')}}">Tambah User</a></li> --}}
-                            {{-- <li><a href="page-register.html">Edit User</a></li> --}}
+                            <li><a href="{{ route ('adduser')}}">Tambah User</a></li>
+                            <li><a href="page-register.html">Edit User</a></li>
                         </ul>
-                </li>
+                </li> --}}
             @endif
             @if(auth()->user()->role == 'user')
                 <li aria-expanded="false">
-                    <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i> Dashboard</a>
+                    <a href=" {{route ('dashboard')}}" class="nav-text"> <i class="flaticon-048-home"></i>Dashboard</a>
                 </li>
                 <li aria-expanded="false">
-                    <a href="{{route ('viewcatatan')}}" class="nav-text"> <i class="flaticon-017-clipboard"></i> Tabel Perjalanan</a>
+                    <a href="{{route ('viewcatatan')}}" class="nav-text"> <i class="flaticon-017-clipboard"></i>Tabel Perjalanan</a>
                 </li>
                 <li aria-expanded="false">
-                    <a href="{{route ('addcatatan')}}" class="nav-text"> <i class="flaticon-044-menu"></i> Tambah Perjalanan</a>
+                    <a href="{{route ('addcatatan')}}" class="nav-text"> <i class="flaticon-044-menu"></i>Tambah Perjalanan</a>
                 </li>
             @endif
                 </ul>

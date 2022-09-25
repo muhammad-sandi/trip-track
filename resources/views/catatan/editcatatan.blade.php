@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <div class="form-validation">
-                        <form class="needs-validation" novalidate="" method="POST" action="/updatecatatan/{{$data->id}}">
+                        <form class="needs-validation" novalidate="" method="POST" action="/updatecatatan/{{$data->id}}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
