@@ -21,7 +21,7 @@
                     </div>
                     <div class="profile-info">
                         <div class="profile-photo">
-                            <img src="images/profile/profile.png" class="img-fluid rounded-circle" alt="Profile">
+                            <img src="/foto_user/{{ Auth::user()->foto_user }}" class="img-fluid rounded-circle" alt="Profile">
                         </div>
                         <div class="profile-details d-inline">
                             <div class="profile-name px-3 pt-2">
